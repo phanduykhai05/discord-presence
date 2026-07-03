@@ -1,0 +1,114 @@
+name: Bug report
+description: Something isn't working as expected
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug! The fields below capture the
+        details that make vibecoder issues fast to diagnose. The single most
+        useful one is the **`vdp status`** output — it shows the hook, daemon,
+        and Discord-connection state in one place.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: My Discord card never appears even though Claude Code is running.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce it?
+      placeholder: |
+        1. Run `vdp install`
+        2. Open Claude Code in a project
+        3. Edit a file
+        4. The card never updates
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. actual behavior
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: status
+    attributes:
+      label: '`vdp status` output'
+      description: Paste the full output of `vdp status`. This shows install, daemon, and Discord-connection state.
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: discord-client
+    attributes:
+      label: Discord client
+      description: Discord Rich Presence only works with the desktop app — the browser client cannot show it.
+      options:
+        - Desktop app
+        - Browser (web)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system + version
+      placeholder: macOS 15.4 / Windows 11 / Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: Output of `node --version` (vibecoder needs Node 18+).
+      placeholder: v20.11.0
+    validations:
+      required: true
+
+  - type: input
+    id: vdp-version
+    attributes:
+      label: vibecoder version
+      description: Output of `vdp --version`.
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme in use
+      description: Which theme were you running? (Relevant for rendering bugs.)
+      options:
+        - minimal
+        - developer
+        - focus
+        - playful
+        - chaos
+        - terminal
+        - shipper
+        - custom
+        - not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Logs, screenshots, or other context.
+    validations:
+      required: false
