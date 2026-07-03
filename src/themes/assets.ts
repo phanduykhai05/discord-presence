@@ -58,7 +58,7 @@ function expandAssetKey(key: string): string[] {
  * Returns the list of unknown keys (empty when the theme is valid). Pure.
  */
 export function findUnknownAssetKeys(theme: Theme): string[] {
-  const keys = [theme.largeImage.key, theme.smallImage.key];
+  const keys = [theme.largeImage.key, theme.smallImage.key].filter(Boolean);
   const unknown: string[] = [];
   for (const key of keys) {
     for (const resolved of expandAssetKey(key)) {

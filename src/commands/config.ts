@@ -29,14 +29,14 @@ function sampleState(now: number): AggregatedState {
   return {
     sessionCount: 1,
     startedAt: now - 83_000, // ~1m 23s ago
-    project: 'my-app',
+    project: 'pwsdata.vn_version_8.1',
     branch: 'main',
     model: 'Opus 4.8',
     state: 'editing',
     activity: 'Editing index.ts',
     file: 'index.ts',
-    tokens: 12_345,
-    cost: 0.42,
+    tokens: 8_765_432,
+    cost: 430.3,
   };
 }
 
