@@ -22,7 +22,7 @@ import type { Theme, ThemeName } from '../types';
 /** A selectable built-in theme — every `ThemeName` except the `custom` editor. */
 export type BuiltInThemeName = Exclude<ThemeName, 'custom'>;
 
-const REPO_URL = 'https://github.com/phanduykhai05/discord-presence';
+const REPO_URL = 'https://github.com/younesfdj/vibecoder-discord-presence';
 
 export const THEMES: Record<string, Theme> = {
   minimal: {
